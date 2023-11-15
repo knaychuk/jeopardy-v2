@@ -1,5 +1,5 @@
-import Board from '@/models/board'
-import { connectToDB } from '@/utils/database'
+import Board from '@/models/board.js'
+import { connectToDB } from '@/utils/database.js'
 
 export const GET = async (req) => {
   try {
