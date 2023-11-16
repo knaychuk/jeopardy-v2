@@ -1,62 +1,33 @@
-// 'use client'
+'use client'
 
-// import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 
-// const DisplayBoard = ({ params }) => {
-//   const [password, setPassword] = useState('')
-//   const [boards, setBoards] = useState(null)
-//   const [verified, setVerified] = useState(false)
+export default function Home() {
+  const [boards, setBoards] = useState(null)
 
-//   useEffect(() => {
-//     setVerified(false)
-//   }, [])
+  useEffect(() => {
+    const fetchBoards = async () => {
+      const response = await fetch('/api/getBoards')
+      const data = await response.json()
 
-//   const handleSubmit = async (e) => {
-//     e.preventDefault()
+      setBoards(data)
+    }
 
-//     try {
-//       const response = await fetch('/api/getBoards')
-//       const data = await response.json()
-      
-//       if(response.ok) {
-//         setBoards(data)
-//         setVerified(true)
-//       }
+    fetchBoards()
 
-//     } catch (err) {
-//       console.log(err)
-//     }
-//   }
+  }, [])
+
+  return (
+   <div>
+    {boards && boards.map((board) => (
+      <div>
+        {board._id}
+        {board.title}
+        {board.password}
+      </div>
+    ))}
 
 
-//   return (
-//     <div>
-//       {verified &&
-//         <div>{boards.map((board) => (
-//           <div key={board._id}>{board._id}{board.title}Board</div>
-//         ))}</div>
-        
-//       }
-//       {/* Submit Password Here */}
-//       {!verified &&
-//       <form onSubmit={handleSubmit}>
-//         <label>
-//           <input 
-//             type="text"
-//             value={password}
-//             onChange={(e) => setPassword(e.target.value)}
-//             required
-//           />
-//         </label>
-//         <div>
-//           <button type='submit' className='bg-white text-black'>
-//             Submit
-//           </button>
-//         </div>
-//       </form>
-//       }
-
-//     </div>
-//   )
-// }
-// export default DisplayBoard
+   </div>
+  )
+}
