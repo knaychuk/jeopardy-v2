@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react'
 const DisplayBoard = ({ params }) => {
 
   return (
-    <div>
-      Specific Board
+    <div className=''>
+      <div>Specific Board</div>
 
     </div>
   )

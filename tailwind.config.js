@@ -7,9 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-     fontFamily: {
-        OpenSans: ['Open Sans', 'sans-serif'] 
+      fontFamily: {
+        OpenSans: ['Open Sans', 'sans-serif'],
+        Jeopardy: ['Swiss911 XCm BT', 'sans-serif']
       },
+      colors: {
+        primary: '#FFCC00',
+        secondary: '#060CE9'
+      }
     },
   },
   plugins: [],

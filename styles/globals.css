@@ -9,13 +9,23 @@
   margin: 0;
   padding: 0;
 
-}
-
-html, body {
-
-}
-
-.font {
+  --primary-color: #FFCC00;
+  --primary-blue-color: #060CE9;
+  --secondary-blue-color:  rgb(0, 5, 158);
 
 }
+
+.primary-button {
+  background-color: var(--secondary-blue-color);
+  color: var(--primary-color);
+  font-size: 3.5rem;
+  padding: 20px 30px;
+
+}
+
+.primary-button:hover {
+  background-color: rgb(52, 52, 66);
+}
+
+
 

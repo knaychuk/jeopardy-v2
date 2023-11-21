@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react'
 
+
+
 const DiscoverBoards = () => {
   const [boards, setBoards] = useState(null)
 
@@ -20,7 +22,8 @@ const DiscoverBoards = () => {
 
 
   return (
-    <div>
+      
+    <div className=''>
        <h1>Discover Boards!</h1>
       {boards && boards.map((board) => (
       <div key={board._id}>
@@ -31,6 +34,8 @@ const DiscoverBoards = () => {
     ))}
 
     </div>
+   
   )
 }
 export default DiscoverBoards
+
