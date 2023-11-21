@@ -6,7 +6,7 @@ const DisplayBoard = ({ params }) => {
 
   return (
     <div>
-      Board
+      Specific Board
 
     </div>
   )
