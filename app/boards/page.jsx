@@ -1,5 +1,5 @@
 'use client'
-
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
 
@@ -23,14 +23,18 @@ const DiscoverBoards = () => {
 
   return (
       
-    <div className=''>
-       <h1>Discover Boards!</h1>
+    <div className='flex flex-col justify-center items-center '>
+       <h1 className='text-primary text-8xl mt-20 mb-10'>Discover Boards!</h1>
       {boards && boards.map((board) => (
-      <div key={board._id}>
-        {board._id}
-        {board.title}
-        {board.password}
-      </div>
+      <Link 
+        key={board._id}
+        href='boards/id'
+        className='board-link'
+      >
+        
+       -- {board.title}
+       
+      </Link>
     ))}
 
     </div>
