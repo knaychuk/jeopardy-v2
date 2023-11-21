@@ -26,7 +26,7 @@ export default function Home() {
         {board.password}
       </div>
     ))}
-
+  Home page
 
    </div>
   )
