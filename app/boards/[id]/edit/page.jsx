@@ -33,7 +33,7 @@ const EditBoard = ({ params }) => {
     <div>
       {verified &&
         <div>{boards.map((board) => (
-          <div key={board._id}>{board._id}{board.title}Board</div>
+          <div key={board._id}>{board._id}{board.name}Board</div>
         ))}</div>
         
       }

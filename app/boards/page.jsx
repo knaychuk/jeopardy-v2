@@ -32,7 +32,7 @@ const DiscoverBoards = () => {
               href='boards/id'
               className='board-link font-OpenSans'
             >
-              {board.title} 
+              {board.name} 
             </Link>
           ))}
           
