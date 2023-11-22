@@ -1,10 +1,11 @@
 import CreateBoardForm from "@components/CreateBoardForm"
 
 const CreateBoard = () => {
-  return (
-    <div>
+  return (   
+    <div className="flex justify-center items-center">
       <CreateBoardForm />
-    </div>
+    </div> 
+  
   )
 }
 export default CreateBoard

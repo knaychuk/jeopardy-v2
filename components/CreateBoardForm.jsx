@@ -12,8 +12,8 @@ const CreateBoardForm = () => {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="mt-[8rem]">
+      <form onSubmit={handleSubmit} className="create-board-form flex flex-col">
         <label>Name your board:</label>
         <input 
           type="text" 
