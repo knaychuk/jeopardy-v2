@@ -24,18 +24,20 @@ const DiscoverBoards = () => {
   return (
       
     <div className='flex flex-col justify-center items-center '>
-       <h1 className='text-primary text-8xl mt-20 mb-10'>Discover Boards!</h1>
-      {boards && boards.map((board) => (
-      <Link 
-        key={board._id}
-        href='boards/id'
-        className='board-link'
-      >
-        
-       -- {board.title}
-       
-      </Link>
-    ))}
+      <h1 className='text-primary text-8xl mt-20 mb-10'>Discover Boards!</h1>
+        <div className='flex flex-col text-center'>
+          {boards && boards.map((board) => (
+            <Link 
+              key={board._id}
+              href='boards/id'
+              className='board-link font-OpenSans'
+            >
+              {board.title} 
+            </Link>
+          ))}
+          
+        </div>
+      
 
     </div>
    

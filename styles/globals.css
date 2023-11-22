@@ -28,9 +28,22 @@
 }
 
 .board-link {
-  
   color: white;
-  font-size: 2.5rem;
-
+  font-size: 2rem;
+  text-decoration: underline;
+  padding: 10px 50px;
+  transition: all 0.2s ease-in-out;
 }
 
+.board-link:hover {
+  color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.board-link:nth-child(even) {
+  background-color: rgb(91, 91, 101);
+}
+
+.board-link:nth-child(odd) {
+  background-color: rgb(52, 52, 66);
+}
