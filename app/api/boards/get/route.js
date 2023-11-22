@@ -1,7 +1,7 @@
-
 import Board from '@models/board'
 import { connectToDB } from '@utils/database'
 
+export const dynamic = 'force-dynamic';
 export const GET = async (req) => {
   try {
     await connectToDB()
