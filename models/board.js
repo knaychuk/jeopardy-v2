@@ -1,7 +1,7 @@
 import { Schema, model, models } from 'mongoose'
 
 const BoardSchema = new Schema({
-  title: {
+  name: {
     type: String,
     required: true
   },

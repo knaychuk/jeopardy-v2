@@ -1,15 +1,4 @@
-'use client'
-
-import { useState } from "react"
-
-const CreateBoardForm = () => {
-  const [name, setName] = useState('')
-  const [password, setPassword] = useState('')
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    console.log(name, password)
-  }
+const CreateBoardForm = ({ board, setBoard, submitting, handleSubmit }) => {
 
   return (
     <div className="mt-[8rem]">
@@ -17,14 +6,16 @@ const CreateBoardForm = () => {
         <label>Name your board:</label>
         <input 
           type="text" 
-          onChange={(e) => setName(e.target.value)}
-          value={name}
+          onChange={(e) => setBoard({...board, name: e.target.value })}
+          value={board.name}
+          required
         />
         <label>Set a password:</label>
         <input 
           type="text" 
-          onChange={(e) => setPassword(e.target.value)}
-          value={password}
+          onChange={(e) => setBoard({...board, password: e.target.value })}
+          value={board.password}
+          required
         />
         <button>Continue</button>
       </form>
