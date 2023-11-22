@@ -19,11 +19,13 @@ const DiscoverBoards = () => {
 
   }, [])
 
-
-
   return (
       
     <div className='flex flex-col justify-center items-center '>
+      <Link
+        href="/"
+        className="text-primary text-3xl absolute top-5 left-10 hover:underline"
+      >&#8592; Back</Link>
       <h1 className='text-primary text-8xl mt-20 mb-10'>Discover Boards!</h1>
         <div className='flex flex-col text-center'>
           {boards && boards.map((board) => (
