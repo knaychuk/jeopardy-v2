@@ -1,6 +1,10 @@
+import CreateBoardForm from "@components/CreateBoardForm"
+
 const CreateBoard = () => {
   return (
-    <div>CreateBoard</div>
+    <div>
+      <CreateBoardForm />
+    </div>
   )
 }
 export default CreateBoard
