@@ -10,7 +10,7 @@ export const POST = async (req) => {
     const newBoard = await Board.create({ name, password })
     const newBoardId = await newBoard._id
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
       await Category.create({ name: 'category', position: i, boardId: newBoardId })
     }
 
