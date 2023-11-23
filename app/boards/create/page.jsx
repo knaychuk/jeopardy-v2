@@ -25,16 +25,16 @@ const CreateBoard = () => {
           password: board.password
         })
       })
-     
+
       if(response.ok) {
         router.push('/boards')
+        console.log('board added')
       }
       
     } catch (err) {
       console.log(err)
     }
-
-    
+  
   }
 
   return (   
