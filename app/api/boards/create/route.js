@@ -10,9 +10,11 @@ export const POST = async (req) => {
     const newBoard = await Board.create({ name, password })
     const newBoardId = await newBoard._id
 
-    const newCategory = await Category.create({ name: 'category', position: 0, boardId: newBoardId })
+    for (let i = 0; i < 5; i++) {
+      await Category.create({ name: 'category', position: i, boardId: newBoardId })
+    }
 
-    return new Response(JSON.stringify(newBoard, newCategory), { status: 200 })
+    return new Response(JSON.stringify(newBoard), { status: 200 })
   } catch (err) {
     return new Response(err, { status: 500 })
   }
