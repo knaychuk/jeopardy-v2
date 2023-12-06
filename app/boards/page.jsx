@@ -35,9 +35,9 @@ const DiscoverBoards = ({ searchParams }) => {
       <h1 className='text-primary text-8xl mt-20 mb-10'>Discover Boards!</h1>
         <div className='flex flex-col'>
           {boards && boards.map((board) => (
-            <div className='board-container relative flex font-OpenSans pr-[10rem] group'>
+            <div key={board._id} className='board-container relative flex font-OpenSans pr-[10rem] group'>
               <Link 
-                key={board._id}
+              
                 href='boards/id'
                 className='board-link font-OpenSans'
               >
