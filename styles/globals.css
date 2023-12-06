@@ -55,11 +55,23 @@
   transition: all 0.2s ease-in-out;
 }
 
-.board-link:nth-child(even) {
+.board-container:nth-child(even) {
   background-color: rgb(91, 91, 101);
 }
 
-.board-link:nth-child(odd) {
+.board-container:nth-child(odd) {
   background-color: rgb(52, 52, 66);
+}
+
+.board-delete-button {
+  background-color: red;
+  color: white;
+  font-size: 1.3rem;
+  padding: 5px 10px;
+}
+
+.board-delete-button:hover {
+  background-color: rgb(168, 2, 2);
+  
 }
 

@@ -9,6 +9,11 @@ const BoardSchema = new Schema({
     type: String,
     required: true
   }
+  /*  
+  theme: {
+    type: String
+  }
+  */
 })
 
 const Board = models.Board || model('Board', BoardSchema)
