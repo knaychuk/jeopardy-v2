@@ -12,7 +12,7 @@ export default function Home() {
       
       <div className="flex flex-col text-center">
         <Link
-          href="/boards/create"
+          href="/create-board"
           className="primary-button mb-10"
         >Create Board</Link>
         <Link
