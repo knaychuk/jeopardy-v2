@@ -21,8 +21,8 @@ const DiscoverBoards = ({ searchParams }) => {
 
   }, [])
 
-  const deleteBoard = (id) => {
-    router.push(`/boards/${id}/delete`)
+  const handleDelete = (id) => {
+    router.push(`/delete-board?id=${id}`)
   }
 
   return (
@@ -44,7 +44,7 @@ const DiscoverBoards = ({ searchParams }) => {
                 {board.name} 
                 
               </Link>
-              <button onClick={() => {deleteBoard(board._id)}} className='board-delete-button absolute right-10 top-3 invisible group-hover:visible'>Delete</button>
+              <button onClick={() => {handleDelete(board._id)}} className='board-delete-button absolute right-10 top-3 invisible group-hover:visible'>Delete</button>
              </div>
           ))}
           
